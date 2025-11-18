@@ -13,7 +13,7 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/stocks");
+      const res = await fetch(`${process.env.APIBASEURL}/api/stocks`);
       const data = await res.json();
 
       setStocks(data?.stocks || []);
@@ -28,7 +28,6 @@ export default function Home() {
   useEffect(() => {
     fetchData();
 
-    // Auto-refresh every 5 seconds
     const interval = setInterval(fetchData, 5000);
     return () => clearInterval(interval);
   }, []);
