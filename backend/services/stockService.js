@@ -1,5 +1,7 @@
 const axios = require("axios");
 
+
+// for now i add the keys in code i have .env file
 const API_KEY = "d4e0uo1r01qmhtc6ip6gd4e0uo1r01qmhtc6ip70"; 
 const BASE_URL = "https://finnhub.io/api/v1";
 
